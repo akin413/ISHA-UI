@@ -1,5 +1,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css");
 
+/* --- CSS Variables --- */
 :root {
   --bg1: #0d1117;
   --bg2: #161b22;
@@ -14,6 +15,7 @@
   background: transparent;
 }
 
+/* --- General Layout --- */
 body,
 html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -24,35 +26,66 @@ html {
   height: 100%;
 }
 
+/* --- Navbar Layout --- */
 #top-navbar {
+  background-color: var(--bg2);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 30px;
+  height: 60px;
+
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
   z-index: 1000;
-  background-color: var(--bg2);
-  border-bottom: 1px solid var(--border-color);
-  padding: 0 30px;
+
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#isha-logo {
+  height: 40px;
+  width: auto;
+  margin-right: 20px;
 }
 
 #repo-title {
-  font-size: 1.5em;
+  font-size: 30px;
   font-weight: 600;
   color: var(--accent-color);
   align-self: center;
 }
 
+#github-link {
+  background-color: var(--accent-color);
+  color: var(--bg-primary);
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9em;
+  transition: background-color 0.2s;
+}
+
+#github-link:hover {
+  background-color: #4b8cdb;
+}
+
+#github-link i {
+  margin-left: 6px;
+}
+
+/* --- Main Layout --- */
+
 #main-layout {
-  margin-top: 60px;
-  height: calc(100vh - 60px);
   display: grid;
   grid-template-columns: 250px 1fr;
+  height: calc(100vh - 60px);
+  margin-top: 60px;
 }
+
+/* --- Sidebar Layout --- */
 
 #sidebar-toc {
   background-color: var(--bg2);
@@ -94,6 +127,7 @@ html {
   color: var(--accent-color);
 }
 
+/* --- Content Layout --- */
 #content-area {
   overflow-y: auto;
   height: 100%;
@@ -101,7 +135,7 @@ html {
 }
 
 #content {
-  padding: 15px 30px;
+  padding: 10px 30px;
   background-color: var(--bg3);
   width: 50%;
   margin: 0 auto;
@@ -114,6 +148,7 @@ html {
   color: var(--accent-color);
 }
 
+/* --- Markdown Layout --- */
 .markdown-body h1 {
   display: none;
 }
