@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPR-Framework README Viewer</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav id="top-navbar">
+      <span id="repo-title">GPR-Framework Documentation</span>
+    </nav>
+
+    <div id="main-layout">
+      <aside id="sidebar-toc">
+        <h2>Table of Contents</h2>
+        <ul id="toc-list"></ul>
+      </aside>
+
+      <main id="content-area">
+        <main id="content">
+          <div id="loading">Fetching README...</div>
+
+          <div id="readme-content" class="markdown-body"></div>
+        </main>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
