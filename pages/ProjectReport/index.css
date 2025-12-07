@@ -4,10 +4,31 @@
 :root {
   --bg1: #0d1117;
   --bg2: #161b22;
-  --bg3: #1b222b8d;
+  --bg3: #1b222b88;
   --text-primary: #c9d1d9;
   --accent-color: #58a6ff;
   --border-color: #30363d;
+  --button-bg: #58a6ff;
+  --button-fg: #0d1117;
+  --md-pre-color: #0D1117;
+  --md-code-color: #c9d1d9;
+  --mermaid-bg: #0D1117;
+  --mermaid-fg: #c9d1d9;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg1: #ffffff;
+    --bg2: #f6f8fa;
+    --bg3: #eff1f3;
+    --text-primary: #24292f;
+    --accent-color: #0366d6;
+    --border-color: #d1d5da;
+    --button-bg: #58a6ff;
+    --button-fg: #ffffff;
+    --md-pre-color: #ffffff;
+    --md-code-color: #0D1117;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -59,7 +80,7 @@ html {
 
 #github-link {
   background-color: var(--accent-color);
-  color: var(--bg-primary);
+  color: var(--bg1);
   padding: 8px 12px;
   border-radius: 4px;
   text-decoration: none;
@@ -169,14 +190,16 @@ html {
   margin-bottom: 16px;
   font-weight: 600;
 }
+.markdown-body pre {
+  background-color: var(--md-pre-color) !important;
+  padding: 16px;
+  margin-bottom: 16px;
+}
 
-.markdown-body pre,
 .markdown-body code {
-  background-color: #010409;
+  color: var(--md-code-color);
   padding: 0.2em 0.4em;
   border-radius: 6px;
-  font-family: monospace;
-  overflow-x: auto;
 }
 
 .markdown-body pre {
@@ -197,4 +220,11 @@ html {
 
 .markdown-body a:hover {
   text-decoration: underline;
+}
+
+.mermaid {
+  background-color: var(--mermaid-bg);
+  color: var(--mermaid-fg);
+  padding: 16px;
+  border-radius: 6px;
 }
